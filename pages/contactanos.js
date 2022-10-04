@@ -30,13 +30,13 @@ export default function contactanos() {
             </div>
             <div className="w-full md:w-6/12 lg:w-4/12 xl:w-4/12 2xl:w-4/12 py-5 px-10">
               <form className="grid isolate z-10 relative" ref={form} onSubmit={sendEmail}>
-                  <label className="text-white">Name</label>
+                  <label className="text-white">Nombre</label>
                   <input className="bg-slate-200 h-10 rounded-md px-5" type="text" name="from_name" required/>
-                  <label className="text-white">Email</label>
+                  <label className="text-white">Correo Electronico</label>
                   <input className="bg-slate-200 h-10 rounded-md px-5" type="email" name="user_email" required/>
-                  <label className="text-white">Message</label>
+                  <label className="text-white">Mensaje</label>
                   <textarea className="bg-slate-200 h-10 rounded-md px-5" name="message" required/>
-                  <input className="bg-slate-200 rounded-md mt-5 w-24 text-black hover:text-white hover:bg-slate-700" type="submit" value="Send" />
+                  <input className="bg-slate-200 rounded-md mt-5 w-24 text-black hover:text-white hover:bg-slate-700" type="submit" value="Enviar" />
                 </form>
             </div>
           </div>

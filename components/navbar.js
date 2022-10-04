@@ -52,13 +52,14 @@ export default function Navbar() {
             setColorClass('text-white')
             setBlur('backdrop-blur-none')
         }
+        window.addEventListener('resize', () => {
+            if (window.innerWidth < 1024 ) {
+                setNavbarOpen(navbarOpen => false)
+            }
+        })
     }, [cWH]);
 
-    window.addEventListener('resize', () => {
-        if (window.innerWidth < 1024 ) {
-            setNavbarOpen(navbarOpen => false)
-        }
-    })
+    
 
     const router = useRouter()
 
