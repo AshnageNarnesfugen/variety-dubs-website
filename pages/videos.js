@@ -1,7 +1,6 @@
-import Bannerimage from "../images/stock-photo-microphone-in-studio-1048675802-transformed.jpeg"
-import Leftimage from '../images/stock-photo-a-girl-works-with-a-microphone-recordings-audio-recording-on-the-radio-or-dubbing-an-audiobook-2145671861-transformed.jpeg'
+import Bannerimage from "../images/stock-photo-video-on-demand-technology-with-person-touching-play-button-on-virtual-screen-to-watch-online-vod-1135226714-transformed.jpeg"
 
-export default function Home() {
+export default function videos() {
   return (
     <>
       <section className="banner-container">
@@ -9,23 +8,31 @@ export default function Home() {
           <div className="container mx-auto flex flex-wrap">
             <div className="w-12/12 md:w-6/12 lg:w-6/12 xl:w-6/12 2xl:w-6/12 py-5 px-10">
               <h1 className='relative text-5xl font-bold text-white text-left isolate z-10'>
-                Variety Dubs
+                Videos
               </h1>
-              <p className='relative text-2xl font-bold text-white text-left isolate z-10'>El mejor estudio de doblaje en<br />todo México.</p>
+              <p className='relative text-2xl font-bold text-white text-left isolate z-10'>
+                Un recopilatorio de videos donde evidenciamos<br/>nuestras recientes producciones exitosas.</p>
             </div>
             <div className="w-12/12 md:w-6/12 lg:w-6/12 xl:w-6/12 2xl:w-6/12"></div>
           </div>
         </div>
       </section>
       <section className="first-content-row flex h-full">
-          <div className="w-12/12 lg:w-8/12 xl:w-8/12 2xl:w-8/12">
+          <div className="w-full">
             <div className="container mx-auto pt-20 pb-20 px-10 lg:px-32 xl:px-32 2xl:px-32">
-              <h2 className="text-5xl font-bold mb-5">¿Que es<br />Variety Dubs?</h2>
-              <p>Variety dubs es una empresa y estudio de doblaje con sede en México donde apoyamos nuevos talentos y entregamos producciones audiovisuales de alta calidad.</p>
+              <h2 className="text-5xl font-bold mb-5">Nuestros<br/>Videos</h2>
+              <div className="flex w-full items-center">
+                <div className="vid-1 w-6/12 md:w-4/12 mx-5">
+                  <iframe className="w-full" height="315" src="https://www.youtube.com/embed/TlyjzXd4BrE" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                </div>
+                <div className="vid-2 w-6/12 md:w-4/12 mx-5">
+                  <iframe className="w-full" height="315" src="https://www.youtube.com/embed/VOfeiheBH60" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                </div>
+                <div className="vid-3 w-6/12 md:w-4/12 mx-5">
+                  <iframe className="w-full" height="315" src="https://www.youtube.com/embed/zcFXRXCrTjs" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                </div>
+              </div>
             </div>
-          </div>
-          <div className="w-4/12 hidden lg:block xl:block 2xl:block">
-              <img className="object-cover object-center h-[500px] w-full" src={Leftimage.src} alt="girl dubbing"/>
           </div>
       </section>
       <style jsx>
@@ -36,14 +43,14 @@ export default function Home() {
               
             }
             .banner-background::before {
-              content: "";
-              position: absolute;
-              top: 0;
-              left: 0;
-              width: 100%;
-              height: 100%;
-              background-color: rgba(50, 50, 50, 0.5);
-            }
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(50, 50, 50, 0.5);
+              }
             .banner-background::after {
               content: "";
               position: absolute;

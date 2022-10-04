@@ -1,32 +1,46 @@
-import Bannerimage from "../images/stock-photo-microphone-in-studio-1048675802-transformed.jpeg"
-import Leftimage from '../images/stock-photo-a-girl-works-with-a-microphone-recordings-audio-recording-on-the-radio-or-dubbing-an-audiobook-2145671861-transformed.jpeg'
+import Bannerimage from "../images/stock-photo-businessman-hand-holding-smart-phone-with-icon-mobile-phone-mail-telephone-and-address-customer-792913780-transformed.jpeg"
+import React, { useRef } from 'react'
+import emailjs from '@emailjs/browser'
 
-export default function Home() {
+export default function contactanos() {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_2mg7yih', 'template_sshzdpx', form.current, 'user_0J0XEtg1MDIAHVo5zevl5')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+  };
   return (
     <>
       <section className="banner-container">
         <div className={`banner relative h-auto w-full banner-background bg-center bg-no-repeat bg-cover pt-96 pb-96`}>
           <div className="container mx-auto flex flex-wrap">
-            <div className="w-12/12 md:w-6/12 lg:w-6/12 xl:w-6/12 2xl:w-6/12 py-5 px-10">
+            <div className="w-full md:w-6/12 lg:w-8/12 xl:w-8/12 2xl:w-8/12 py-5 px-10">
               <h1 className='relative text-5xl font-bold text-white text-left isolate z-10'>
-                Variety Dubs
+                Contactanos
               </h1>
-              <p className='relative text-2xl font-bold text-white text-left isolate z-10'>El mejor estudio de doblaje en<br />todo México.</p>
+              <p className='relative text-2xl font-bold text-white text-left isolate z-10'>
+                Se libre de contactarnos a<br />
+                travez de nuestro formulario.</p>
             </div>
-            <div className="w-12/12 md:w-6/12 lg:w-6/12 xl:w-6/12 2xl:w-6/12"></div>
+            <div className="w-full md:w-6/12 lg:w-4/12 xl:w-4/12 2xl:w-4/12 py-5 px-10">
+              <form className="grid isolate z-10 relative" ref={form} onSubmit={sendEmail}>
+                  <label className="text-white">Name</label>
+                  <input className="bg-slate-200 h-10 rounded-md px-5" type="text" name="from_name" required/>
+                  <label className="text-white">Email</label>
+                  <input className="bg-slate-200 h-10 rounded-md px-5" type="email" name="user_email" required/>
+                  <label className="text-white">Message</label>
+                  <textarea className="bg-slate-200 h-10 rounded-md px-5" name="message" required/>
+                  <input className="bg-slate-200 rounded-md mt-5 w-24 text-black hover:text-white hover:bg-slate-700" type="submit" value="Send" />
+                </form>
+            </div>
           </div>
         </div>
-      </section>
-      <section className="first-content-row flex h-full">
-          <div className="w-12/12 lg:w-8/12 xl:w-8/12 2xl:w-8/12">
-            <div className="container mx-auto pt-20 pb-20 px-10 lg:px-32 xl:px-32 2xl:px-32">
-              <h2 className="text-5xl font-bold mb-5">¿Que es<br />Variety Dubs?</h2>
-              <p>Variety dubs es una empresa y estudio de doblaje con sede en México donde apoyamos nuevos talentos y entregamos producciones audiovisuales de alta calidad.</p>
-            </div>
-          </div>
-          <div className="w-4/12 hidden lg:block xl:block 2xl:block">
-              <img className="object-cover object-center h-[500px] w-full" src={Leftimage.src} alt="girl dubbing"/>
-          </div>
       </section>
       <style jsx>
         {
@@ -36,14 +50,14 @@ export default function Home() {
               
             }
             .banner-background::before {
-              content: "";
-              position: absolute;
-              top: 0;
-              left: 0;
-              width: 100%;
-              height: 100%;
-              background-color: rgba(50, 50, 50, 0.5);
-            }
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(50, 50, 50, 0.5);
+              }
             .banner-background::after {
               content: "";
               position: absolute;
