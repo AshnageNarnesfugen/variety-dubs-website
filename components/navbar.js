@@ -52,14 +52,14 @@ export default function Navbar() {
             setColorClass('text-white')
             setBlur('backdrop-blur-none')
         }
-
-        window.addEventListener('resize', () => {
-            if (window.innerWidth < 1024 ) {
-                setNavbarOpen(navbarOpen => false)
-            }
-        })
     }, [cWH]);
-      
+
+    window.addEventListener('resize', () => {
+        if (window.innerWidth < 1024 ) {
+            setNavbarOpen(navbarOpen => false)
+        }
+    })
+
     const router = useRouter()
 
     const handleToggle = () => {
@@ -103,7 +103,7 @@ export default function Navbar() {
                                         <li onClick={() => {
                                             setActiveIdx(idx)
                                             router.push(menu.href)
-                                        }} key={menu.text} className={`ml-32 item1 flex content-center items-center h-full mr-4 ${colorClass}`}>
+                                        }} key={menu.text} className={`ml-32 item1 flex content-center items-center h-full ${colorClass}`}>
                                             <NavItem active={activeIdx === idx} {...menu}/>
                                         </li>
                                     ))
