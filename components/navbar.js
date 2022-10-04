@@ -7,7 +7,7 @@ const NavItem = ({ text, href, active}) => {
     return (
         <Link href={href}>
             <a className={`nav__item ${
-                active ? 'bold bg-slate-400 rounded-lg' : ''
+                active ? 'bold border-2 border-slate-200 rounded-lg' : ''
             } px-5`}>
                 {text}
             </a>
