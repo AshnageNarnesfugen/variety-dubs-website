@@ -56,7 +56,6 @@ export default function Navbar() {
         window.addEventListener('resize', () => {
             if (window.innerWidth < 1024 ) {
                 setNavbarOpen(navbarOpen => false)
-                console.log('open')
             }
         })
     }, [cWH]);
