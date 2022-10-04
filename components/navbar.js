@@ -28,8 +28,8 @@ export default function Navbar() {
     const [bT, setBT] = useState(0)
     const [colorClass, setColorClass] = useState('text-white')
     const [blur, setBlur] = useState('backdrop-blur-none')
-    const [navActive, setNavActive] = useState(null);
     const [activeIdx, setActiveIdx] = useState(-1);
+    const [navbarOpen, setNavbarOpen] = useState(false)
     
     useEffect(() => {
         window.addEventListener('scroll', handleScroll)
@@ -52,9 +52,20 @@ export default function Navbar() {
             setColorClass('text-white')
             setBlur('backdrop-blur-none')
         }
+
+        window.addEventListener('resize', () => {
+            if (window.innerWidth < 1024 ) {
+                setNavbarOpen(navbarOpen => false)
+                console.log('open')
+            }
+        })
     }, [cWH]);
       
     const router = useRouter()
+
+    const handleToggle = () => {
+        setNavbarOpen(!navbarOpen)
+    }
 
     return (
         <>
@@ -71,18 +82,34 @@ export default function Navbar() {
                             </Link> 
                             <span className={`${colorClass}`}>Variety Dubs</span>
                         </div>
-                        <div className={`h-16 hidden md:flex lg:flex xl:flex 2xl:flex`}>
+                        <div className={`desktop_menu h-16 hidden md:hidden lg:flex xl:flex 2xl:flex`}>
                             {
                                 MENU_LIST.map((menu, idx) => (
                                     <div onClick={() => {
                                         setActiveIdx(idx)
-                                        setNavActive(false)
                                         router.push(menu.href)
                                     }} key={menu.text} className={`item1 flex content-center items-center h-full mr-4 ${colorClass}`}>
                                         <NavItem active={activeIdx === idx} {...menu}/>
                                     </div>
                                 ))
                             }
+                        </div>
+                        <div className="mobile_menu static lg:absolute">
+                            <button className={`block lg:hidden mr-5 ${colorClass} text-4xl`} onClick={handleToggle}>{navbarOpen ? "⤬" : "⬱"}</button>
+                            <ul className={`open close menuNav absolute left-0 top-[74px] w-full bg-slate-200 ${navbarOpen ? "block" : "hidden"} lg:hidden ${blur}`} style={{
+                                background: `rgba(226, 232, 240, ${bT})`
+                            }}>
+                                {
+                                    MENU_LIST.map((menu, idx) => (
+                                        <li onClick={() => {
+                                            setActiveIdx(idx)
+                                            router.push(menu.href)
+                                        }} key={menu.text} className={`ml-32 item1 flex content-center items-center h-full mr-4 ${colorClass}`}>
+                                            <NavItem active={activeIdx === idx} {...menu}/>
+                                        </li>
+                                    ))
+                                }
+                            </ul>   
                         </div>
                     </div>
                 </nav>

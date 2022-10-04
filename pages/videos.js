@@ -21,15 +21,15 @@ export default function videos() {
           <div className="w-full">
             <div className="container mx-auto pt-20 pb-20 px-10 lg:px-32 xl:px-32 2xl:px-32">
               <h2 className="text-5xl font-bold mb-5">Nuestros<br/>Videos</h2>
-              <div className="flex w-full items-center">
-                <div className="vid-1 w-6/12 md:w-4/12 mx-5">
-                  <iframe className="w-full" height="315" src="https://www.youtube.com/embed/TlyjzXd4BrE" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+              <div className="flex flex-wrap w-full items-center justify-between">
+                <div className="vid-1 w-full md:w-4/12">
+                  <iframe className="w-full p-5" height="315" src="https://www.youtube.com/embed/TlyjzXd4BrE" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                 </div>
-                <div className="vid-2 w-6/12 md:w-4/12 mx-5">
-                  <iframe className="w-full" height="315" src="https://www.youtube.com/embed/VOfeiheBH60" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                <div className="vid-2 w-full md:w-4/12">
+                  <iframe className="w-full p-5" height="315" src="https://www.youtube.com/embed/VOfeiheBH60" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                 </div>
-                <div className="vid-3 w-6/12 md:w-4/12 mx-5">
-                  <iframe className="w-full" height="315" src="https://www.youtube.com/embed/zcFXRXCrTjs" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                <div className="vid-3 w-full md:w-4/12">
+                  <iframe className="w-full p-5" height="315" src="https://www.youtube.com/embed/zcFXRXCrTjs" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                 </div>
               </div>
             </div>
