@@ -2,7 +2,7 @@ import Bannerimage from "../images/stock-photo-businessman-hand-holding-smart-ph
 import React, { useRef } from 'react'
 import emailjs from '@emailjs/browser'
 
-export default function contactanos() {
+export default function Contactanos() {
   const form = useRef();
 
   const sendEmail = (e) => {
