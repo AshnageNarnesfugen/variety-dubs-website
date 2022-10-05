@@ -33,9 +33,13 @@ export default function perfiles() {
                 </div>
                 <div className="colaborador2 w-6/12 md:w-3/12 grid m-5">
                     <img className="w-64 rounded-md object-cover object-center mb-5"  src={Teamplaceholder.src} alt="Sumiko" />
+                    <p>Gabriela / Directora Ejecutiva (CEO)</p>
+                    <p>Actriz de Doblaje Sénior</p>
                 </div>
                 <div className="colaborador3 w-6/12 md:w-3/12 grid m-5">
                     <img className="w-64 rounded-md object-cover object-center mb-5"  src={Teamplaceholder.src} alt="Vec" />
+                    <p>Vec / Co-fundador</p>
+                    <p>Actor de Doblaje Sénior</p>
                 </div>
               </div>
             </div>
