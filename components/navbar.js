@@ -2,7 +2,7 @@ import logo from './V.png'
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import {useRouter} from 'next/router'
-import Image from 'next/image'
+//import Image from 'next/image'
 
 const NavItem = ({ text, href, active}) => {
     return (
@@ -78,7 +78,7 @@ export default function Navbar() {
                         <div className="icon-container w-64 flex justify-center content-center items-center space-x-2">
                             <Link href={'/'}>
                                 <a>
-                                    <Image className="object-contain object-center mt-3 mb-3" src={logo.src} alt="Logo" width="50px" height="50px"/>
+                                    <img className="object-contain object-center mt-3 mb-3" src={logo.src} alt="Logo" width="50px" height="50px"/>
                                 </a>
                             </Link> 
                             <span className={`${colorClass}`}>Variety Dubs</span>

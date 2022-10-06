@@ -1,6 +1,6 @@
 import Bannerimage from "../images/stock-photo-microphone-in-studio-1048675802-transformed.jpeg"
 import Leftimage from '../images/stock-photo-a-girl-works-with-a-microphone-recordings-audio-recording-on-the-radio-or-dubbing-an-audiobook-2145671861-transformed.jpeg'
-import Image from 'next/image'
+//import Image from 'next/image'
 
 export default function Home() {
   return (
@@ -26,7 +26,7 @@ export default function Home() {
             </div>
           </div>
           <div className="w-4/12 hidden lg:block xl:block 2xl:block">
-              <Image className="object-cover object-center h-[500px] w-full" src={Leftimage.src} alt="girl dubbing"/>
+              <img className="object-cover object-center h-[500px] w-full" src={Leftimage.src} alt="girl dubbing"/>
           </div>
       </section>
       <style jsx>
