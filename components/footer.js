@@ -5,7 +5,7 @@ export default function Footer() {
                 <div className="container mx-auto">
                     <div className="row flex">
                         <div className="w-6/12">
-                            Derechos Reservados © Variety Dubs 2022
+                            Derechos Reservados © S.A de C.V Variety Dubs 2022
                         </div>
                         <div className="w-6/12"></div>
                     </div>
