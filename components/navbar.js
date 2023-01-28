@@ -30,7 +30,7 @@ export default function Navbar() {
     const [blur, setBlur] = useState('backdrop-blur-none')
     const [activeIdx, setActiveIdx] = useState(-1);
     const [navbarOpen, setNavbarOpen] = useState(false)
-    
+
     useEffect(() => {
         window.addEventListener('scroll', handleScroll)
         return () => window.removeEventListener('scroll', handleScroll)
@@ -70,7 +70,7 @@ export default function Navbar() {
     return (
         <>
             <header>
-                <nav className={`bg-slate-200 fixed w-full z-20 ${blur}`} style={{
+                <nav id="navbar" className={`bg-slate-200 fixed w-full z-20 ${blur}`} style={{
                     background: `rgba(226, 232, 240, ${bT})`
                 }}>
                     <div className="container mx-auto flex h-full justify-between items-center">

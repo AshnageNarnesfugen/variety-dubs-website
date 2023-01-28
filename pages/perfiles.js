@@ -27,15 +27,15 @@ export default function perfiles() {
             <div className="container mx-auto pt-20 pb-20 px-10 lg:px-32 xl:px-32 2xl:px-32 w-full">
               <h2 className="text-5xl font-bold mb-5">Nuestros<br/>Colaboradores</h2>
               <div className="container mx-auto flex flex-wrap justify-center items-baseline">
-                <div className="colaborador1 w-6/12 md:w-2/12 grid m-5">
-                    <img className="w-64 rounded-md object-cover object-center mb-5" src={Alexis.src} alt="Ashnage" />
-                    <p>Alexis Cantú Avila / Co-fundador (Co-Founder / Co-CEO)</p>
-                    <p>Actor de Doblaje Sénior</p>
-                </div>
                 <div className="colaborador2 w-6/12 md:w-2/12 grid m-5">
                     <img className="w-64 rounded-md object-cover object-center mb-5"  src={Teamplaceholder.src} alt="Sumiko" />
                     <p>Gabriela / Directora Ejecutiva (CEO)</p>
                     <p>Actriz de Doblaje Sénior</p>
+                </div>
+                <div className="colaborador1 w-6/12 md:w-2/12 grid m-5">
+                    <img className="w-64 rounded-md object-cover object-center mb-5" src={Alexis.src} alt="Ashnage" />
+                    <p>Alexis Cantú Avila / Co-fundador (Co-Founder / Co-CEO)</p>
+                    <p>Actor de Doblaje Sénior</p>
                 </div>
               </div>
             </div>

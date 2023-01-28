@@ -64,10 +64,10 @@ export default function Videos() {
               <h2 className="text-5xl font-bold mb-5">Nuestros<br/>Videos</h2>
               <div className="grid lg:grid-cols-3 grid-cols-1 gap-4">
                 {videos.map((video) => (
-                    <div key={video.id} className="col-span-1" onClick={() => {
+                    <div key={video.id} className="col-span-1 overflow-hidden" onClick={() => {
                       handleVideoClick(video.id)
                     }}>
-                      <div className={`relative after:content-[url("../images/play+button+play+record+record+icon-1320191267565063591.png")] after:grid after:content-center after:text-center after:absolute after:top-0 after:left-0 after:w-full after:h-full after:bg-zinc-600/50 after:hover:opacity-50 after:opacity-0 after:transition-all`}>
+                      <div className={`relative after:content-[url("../images/play+button+play+record+record+icon-1320191267565063591.png")] after:grid after:content-center after:text-center after:absolute after:top-0 after:left-0 after:w-full after:h-full after:bg-zinc-600/50 hover:after:opacity-50 after:opacity-0 after:transition-all`}>
                         <img src={video.thumbnail} alt={video.title} className="h-48 w-full object-cover"/>
                       </div>
                       <h3>{video.title}</h3>  

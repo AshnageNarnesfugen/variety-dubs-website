@@ -21,7 +21,11 @@ export default function Home() {
           <div className="w-12/12 lg:w-8/12 xl:w-8/12 2xl:w-8/12">
             <div className="container mx-auto pt-20 pb-20 px-10 lg:px-32 xl:px-32 2xl:px-32">
               <h2 className="text-5xl font-bold mb-5">¿Que es<br />Variety Dubs?</h2>
-              <p>Variety dubs es una empresa y estudio de doblaje con sede en México donde apoyamos nuevos talentos y entregamos producciones audiovisuales de alta calidad.</p>
+              <p className="mb-5">Bienvenidos a Variety Dubs, una empresa de doblaje en México con sede en Monterrey. Somos una empresa joven y ambiciosa, con un equipo de talentosos y entusiastas profesionales del doblaje.</p>
+              <p className="mb-5">Estamos comprometidos en ofrecer servicios de doblaje de alta calidad a nuestros clientes, ya sea para películas, series de televisión, videojuegos o contenido educativo. Contamos con un equipo de profesionales especializados en diferentes idiomas y géneros, que trabajan incansablemente para garantizar que cada proyecto sea un éxito.</p>
+              <p className="mb-5">Nuestra experiencia y pasión por el doblaje nos permite ofrecer un servicio personalizado y adaptado a las necesidades de cada cliente, y estamos siempre dispuestos a trabajar mano a mano con nuestros clientes para garantizar que el resultado final sea exactamente lo que están buscando.</p>
+              <p className="mb-5">Además, estamos comprometidos con la innovación y la adopción de las últimas tecnologías para mejorar continuamente nuestros servicios y ofrecer una experiencia de doblaje de vanguardia.</p>
+              <p className="mb-5">Si está buscando una empresa de doblaje en México con un equipo de talentosos profesionales y una atención al cliente excepcional, no dude en ponerse en contacto con nosotros. Estamos ansiosos por trabajar con usted en su próximo proyecto de doblaje.</p>
             </div>
           </div>
           <div className="w-4/12 hidden lg:block xl:block 2xl:block">

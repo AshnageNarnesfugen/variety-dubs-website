@@ -1,4 +1,5 @@
 import Bannerimage from "../images/stock-photo-african-video-editor-working-with-footage-and-sound-editing-new-project-cutting-film-montage-1992294521-transformed.jpeg"
+import alexis from '../images/1590124259172.jpg'
 
 export default function proyectos() {
   return (
@@ -22,9 +23,34 @@ export default function proyectos() {
           <div className="w-full">
             <div className="container mx-auto pt-20 pb-20 px-10 lg:px-32 xl:px-32 2xl:px-32">
               <h2 className="text-5xl font-bold mb-5">Nuestros<br />Proyectos</h2>
+              {/*
               <div className="w-full text-center">
                 <h2 className="text-center text-5xl font-bold mb-5">Proximamente...</h2>
               </div>
+              */}
+              
+              <div className="bg-white rounded-lg shadow-md p-6">
+              <h2 className="text-lg font-medium mb-4">Voiceover Project Title</h2>
+              <p className="text-gray-700 mb-4">A brief description of the voiceover project, including the language and target audience.</p>
+              <div className="flex items-center mb-4">
+                <img src={alexis.src} alt="Voiceover Artist" className="w-12 h-12 rounded-full mr-4" />
+                <div>
+                  <p className="text-gray-700 font-medium">Alexis Cantu Avila</p>
+                  <p className="text-gray-600">Director</p>
+                </div>
+              </div>
+              <div className="flex justify-between">
+                <div>
+                  <p className="text-gray-600">Language: Spanish</p>
+                </div>
+                <div>
+                  <p className="text-gray-600">Duration: 5:00</p>
+                </div>
+              </div>
+              <div className="mt-4">
+                <a href="#" className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">Listen to Sample</a>
+              </div>
+            </div>
             </div>
           </div>
       </section>

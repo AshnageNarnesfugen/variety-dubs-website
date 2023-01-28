@@ -18,6 +18,7 @@ function MyApp({ Component, pageProps, router }) {
           exit="exit"
           transition={{type: 'linear'}}
           variants={variants}
+          className='h-full'
         >
           <Component {...pageProps} />
         </motion.div>

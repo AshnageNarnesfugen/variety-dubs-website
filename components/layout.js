@@ -34,11 +34,15 @@ export default function Layout({children}) {
                 <link rel="shortcut icon" href={favicon.src} />
                 <title>Variety Dubs</title>
             </Head>
-            <Header/>
-                <main>
-                    {children}
-                </main>
-            <Footer/>
+            <div className='flex flex-col min-h-screen'>
+               <Header/>
+                    <main className='flex-1 flex flex-col flex-wrap'>
+                        {children}
+                    </main>
+                <Footer/> 
+            </div>
+            
+
         </>
     )
 }
