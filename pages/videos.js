@@ -1,7 +1,7 @@
 import Bannerimage from "../images/stock-photo-video-on-demand-technology-with-person-touching-play-button-on-virtual-screen-to-watch-online-vod-1135226714-transformed.jpeg"
 import { useState, useEffect, useRef } from 'react'
 
-export default function videos() {
+export default function Videos() {
   
   let videos = [{
     id: 'TlyjzXd4BrE',
