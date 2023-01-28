@@ -38,7 +38,7 @@ export default function Videos() {
       return;
     }
     const iframe = iframeRef.current;
-    iframe.width = "1280";
+    iframe.width = "80%";
     iframe.height = "720";
   }, [selectedVideo]);
 
@@ -62,26 +62,26 @@ export default function Videos() {
           <div className="w-full">
             <div className="container mx-auto pt-20 pb-20 px-10 lg:px-32 xl:px-32 2xl:px-32">
               <h2 className="text-5xl font-bold mb-5">Nuestros<br/>Videos</h2>
-              <div className="grid grid-cols-3 gap-4">
+              <div className="grid lg:grid-cols-3 grid-cols-1 gap-4">
                 {videos.map((video) => (
-                  <div key={video.id} className="col-span-1" onClick={() => {
-                    handleVideoClick(video.id)
-                  }}>
-                    <img src={video.thumbnail} alt={video.title} className="h-48 w-full object-cover"/>
-                  </div>
+                    <div key={video.id} className="col-span-1" onClick={() => {
+                      handleVideoClick(video.id)
+                    }}>
+                      <div className={`relative after:content-[url("../images/play+button+play+record+record+icon-1320191267565063591.png")] after:grid after:content-center after:text-center after:absolute after:top-0 after:left-0 after:w-full after:h-full after:bg-zinc-600/50 after:hover:opacity-50 after:opacity-0 after:transition-all`}>
+                        <img src={video.thumbnail} alt={video.title} className="h-48 w-full object-cover"/>
+                      </div>
+                      <h3>{video.title}</h3>  
+                    </div>
                 ))}
               </div>
               {showModal && (
-                <div className="fixed top-0 left-0 right-0 bottom-0 bg-black bg-opacity-50 z-50 backdrop-blur-md" onClick={handleCloseModal}>
-                  <div className="absolute top-0 left-0 right-0 bottom-0 w-full h-full p-4 grid items-center content-center">
-                    <div className="w-full h-full pb-56.25 grid items-center content-center justify-center">
+                <div className="fixed w-full top-0 left-0 right-0 bottom-0 bg-black bg-opacity-50 z-50 backdrop-blur-md" onClick={handleCloseModal}>
                       <iframe
+                        className="absolute left-2/4 top-2/4 -translate-x-2/4 -translate-y-2/4"
                         ref={iframeRef}
                         src={`https://www.youtube.com/embed/${selectedVideo}`}
                         allowFullScreen
                       />
-                    </div>
-                  </div>
                 </div>
               )}
             </div>

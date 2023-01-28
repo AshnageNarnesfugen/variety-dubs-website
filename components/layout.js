@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Header from './navbar'
 import Footer from './footer'
 import favicon from '../public/VD.ico'
+import Banner from '../images/300835790_444611184351716_6625068512432527425_n.jpg'
 
 export const config = {amp: true}
 
@@ -23,11 +24,11 @@ export default function Layout({children}) {
                 <meta property="og:type" content="article" />
                 <meta property="og:description" content=" Estudio de doblaje con sede en México" />
                 <meta property="og:url" content="" />
-                <meta property="og:image" content="https://raw.githubusercontent.com/AshnageNarnesfugen/INSaNE-OFFICIAL/gh-pages/img/72C1E586-8F8B-4813-BC49-AEC339EE27C1.PNG" />
+                <meta property="og:image" content={Banner} />
                 <meta property="og:site_name" content="Variety Dubs" />
                 <meta name="twitter:title" content="Variety Dubs " />
                 <meta name="twitter:description" content=" Estudio de doblaje con sede en México" />
-                <meta name="twitter:image" content="https://raw.githubusercontent.com/AshnageNarnesfugen/INSaNE-OFFICIAL/gh-pages/img/72C1E586-8F8B-4813-BC49-AEC339EE27C1.PNG" />
+                <meta name="twitter:image" content={Banner} />
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:image:alt" content="variety-banner" />
                 <link rel="shortcut icon" href={favicon.src} />

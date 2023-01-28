@@ -2,7 +2,6 @@ import logo from './V.png'
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import {useRouter} from 'next/router'
-//import Image from 'next/image'
 
 const NavItem = ({ text, href, active}) => {
     return (
@@ -55,7 +54,7 @@ export default function Navbar() {
         }
         window.addEventListener('resize', () => {
             if (window.innerWidth < 1024 ) {
-                setNavbarOpen(navbarOpen => false)
+                setNavbarOpen(false)
             }
         })
     }, [cWH]);
@@ -97,20 +96,22 @@ export default function Navbar() {
                         </div>
                         <div className="mobile_menu static lg:absolute">
                             <button className={`block lg:hidden mr-5 ${colorClass} text-4xl`} onClick={handleToggle}>{navbarOpen ? "⤬" : "⬱"}</button>
-                            <ul className={`open close menuNav absolute left-0 top-[74px] w-full bg-slate-200 ${navbarOpen ? "block" : "hidden"} lg:hidden ${blur}`} style={{
+                            <div className={`open close menuNav absolute left-[0px] top-[74px] w-full bg-slate-200 ${navbarOpen ? "block" : "hidden"} lg:hidden ${blur}`} style={{
                                 background: `rgba(226, 232, 240, ${bT})`
                             }}>
-                                {
-                                    MENU_LIST.map((menu, idx) => (
-                                        <li onClick={() => {
-                                            setActiveIdx(idx)
-                                            router.push(menu.href)
-                                        }} key={menu.text} className={`ml-32 item1 flex content-center items-center h-full ${colorClass}`}>
-                                            <NavItem active={activeIdx === idx} {...menu}/>
-                                        </li>
-                                    ))
-                                }
-                            </ul>   
+                                <ul className='w-full grid place-items-end'>
+                                    {
+                                        MENU_LIST.map((menu, idx) => (
+                                            <li onClick={() => {
+                                                setActiveIdx(idx)
+                                                router.push(menu.href)
+                                            }} key={menu.text} className={`item1 flex content-center items-center h-full ${colorClass}`}>
+                                                <NavItem active={activeIdx === idx} {...menu}/>
+                                            </li>
+                                        ))
+                                    }
+                                </ul> 
+                            </div> 
                         </div>
                     </div>
                 </nav>
