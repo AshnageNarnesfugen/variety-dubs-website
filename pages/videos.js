@@ -1,6 +1,47 @@
 import Bannerimage from "../images/stock-photo-video-on-demand-technology-with-person-touching-play-button-on-virtual-screen-to-watch-online-vod-1135226714-transformed.jpeg"
+import { useState, useEffect, useRef } from 'react'
 
 export default function videos() {
+  
+  let videos = [{
+    id: 'TlyjzXd4BrE',
+    title: 'Charla en C4 |FANDUB ESPAÑOL||Rainbow Six Siege Animación||VarietyDubs||',
+    thumbnail: 'https://img.youtube.com/vi/TlyjzXd4BrE/hqdefault.jpg',
+  },
+  {
+    id: 'VOfeiheBH60',
+    title: 'CONTENIDO DE CALIDAD|Fandub Español| Zalinki Animation| Variety Dubs.',
+    thumbnail: 'https://img.youtube.com/vi/VOfeiheBH60/hqdefault.jpg',
+  },
+  {
+    id: 'zcFXRXCrTjs',
+    title: 'LA RUTA PROHIBIDA|ICE SCREAM|Doblaje en Español|Funamusea Cómics|VarietyDubs.',
+    thumbnail: 'https://img.youtube.com/vi/zcFXRXCrTjs/hqdefault.jpg',
+  },]
+
+  const [showModal, setShowModal] = useState(false);
+  const [selectedVideo, setSelectedVideo] = useState('');
+  const iframeRef = useRef(null);
+
+  const handleVideoClick = (videoId) => {
+    setShowModal(true);
+    setSelectedVideo(videoId);
+  };
+
+  const handleCloseModal = () => {
+    setShowModal(false);
+    setSelectedVideo('');
+  };
+
+  useEffect(() => {
+    if (!iframeRef.current) {
+      return;
+    }
+    const iframe = iframeRef.current;
+    iframe.width = "1280";
+    iframe.height = "720";
+  }, [selectedVideo]);
+
   return (
     <>
       <section className="banner-container">
@@ -21,17 +62,28 @@ export default function videos() {
           <div className="w-full">
             <div className="container mx-auto pt-20 pb-20 px-10 lg:px-32 xl:px-32 2xl:px-32">
               <h2 className="text-5xl font-bold mb-5">Nuestros<br/>Videos</h2>
-              <div className="flex flex-wrap w-full items-center justify-between">
-                <div className="vid-1 w-full md:w-4/12">
-                  <iframe className="w-full p-5" height="315" src="https://www.youtube.com/embed/TlyjzXd4BrE" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-                </div>
-                <div className="vid-2 w-full md:w-4/12">
-                  <iframe className="w-full p-5" height="315" src="https://www.youtube.com/embed/VOfeiheBH60" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-                </div>
-                <div className="vid-3 w-full md:w-4/12">
-                  <iframe className="w-full p-5" height="315" src="https://www.youtube.com/embed/zcFXRXCrTjs" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-                </div>
+              <div className="grid grid-cols-3 gap-4">
+                {videos.map((video) => (
+                  <div key={video.id} className="col-span-1" onClick={() => {
+                    handleVideoClick(video.id)
+                  }}>
+                    <img src={video.thumbnail} alt={video.title} className="h-48 w-full object-cover"/>
+                  </div>
+                ))}
               </div>
+              {showModal && (
+                <div className="fixed top-0 left-0 right-0 bottom-0 bg-black bg-opacity-50 z-50 backdrop-blur-md" onClick={handleCloseModal}>
+                  <div className="absolute top-0 left-0 right-0 bottom-0 w-full h-full p-4 grid items-center content-center">
+                    <div className="w-full h-full pb-56.25 grid items-center content-center justify-center">
+                      <iframe
+                        ref={iframeRef}
+                        src={`https://www.youtube.com/embed/${selectedVideo}`}
+                        allowFullScreen
+                      />
+                    </div>
+                  </div>
+                </div>
+              )}
             </div>
           </div>
       </section>

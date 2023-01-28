@@ -1,6 +1,6 @@
 import Bannerimage from "../images/stock-photo-passport-photos-of-different-people-431262283-transformed.jpeg"
 import Alexis from '../images/1590124259172.jpg'
-import Teamplaceholder from '../images/team-placeholder.png'
+import Teamplaceholder from '../images/sumiko.jpg'
 //import Image from 'next/image'
 
 export default function perfiles() {
@@ -27,20 +27,15 @@ export default function perfiles() {
             <div className="container mx-auto pt-20 pb-20 px-10 lg:px-32 xl:px-32 2xl:px-32 w-full">
               <h2 className="text-5xl font-bold mb-5">Nuestros<br/>Colaboradores</h2>
               <div className="container mx-auto flex flex-wrap justify-center items-baseline">
-                <div className="colaborador1 w-6/12 md:w-3/12 grid m-5">
+                <div className="colaborador1 w-6/12 md:w-2/12 grid m-5">
                     <img className="w-64 rounded-md object-cover object-center mb-5" src={Alexis.src} alt="Ashnage" />
-                    <p>Alexis Cantú Avila / Co-fundador</p>
+                    <p>Alexis Cantú Avila / Co-fundador (Co-Founder / Co-CEO)</p>
                     <p>Actor de Doblaje Sénior</p>
                 </div>
-                <div className="colaborador2 w-6/12 md:w-3/12 grid m-5">
+                <div className="colaborador2 w-6/12 md:w-2/12 grid m-5">
                     <img className="w-64 rounded-md object-cover object-center mb-5"  src={Teamplaceholder.src} alt="Sumiko" />
                     <p>Gabriela / Directora Ejecutiva (CEO)</p>
                     <p>Actriz de Doblaje Sénior</p>
-                </div>
-                <div className="colaborador3 w-6/12 md:w-3/12 grid m-5">
-                    <img className="w-64 rounded-md object-cover object-center mb-5"  src={Teamplaceholder.src} alt="Vec" />
-                    <p>Vec / Co-fundador</p>
-                    <p>Actor de Doblaje Sénior</p>
                 </div>
               </div>
             </div>

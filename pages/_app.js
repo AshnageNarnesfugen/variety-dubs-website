@@ -9,18 +9,20 @@ function MyApp({ Component, pageProps, router }) {
       exit: { opacity: 0, x: 0, y: -200 },
   }
   return (
-    <Layout>
-      <motion.div
-        key={router.route}
-        initial="hidden"
-        animate="enter"
-        exit="exit"
-        transition={{type: 'linear'}}
-        variants={variants}
-      >
-        <Component {...pageProps} />
-      </motion.div>
-    </Layout>
+    <>
+      <Layout>
+        <motion.div
+          key={router.route}
+          initial="hidden"
+          animate="enter"
+          exit="exit"
+          transition={{type: 'linear'}}
+          variants={variants}
+        >
+          <Component {...pageProps} />
+        </motion.div>
+      </Layout>
+    </>
   )
 }
 

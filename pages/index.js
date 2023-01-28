@@ -1,6 +1,5 @@
 import Bannerimage from "../images/stock-photo-microphone-in-studio-1048675802-transformed.jpeg"
 import Leftimage from '../images/stock-photo-a-girl-works-with-a-microphone-recordings-audio-recording-on-the-radio-or-dubbing-an-audiobook-2145671861-transformed.jpeg'
-//import Image from 'next/image'
 
 export default function Home() {
   return (
