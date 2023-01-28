@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 export default function Footer() {
     return (
         <>
@@ -18,19 +20,19 @@ export default function Footer() {
                     <h4 className="text-lg font-medium">Follow Us</h4>
                     <ul className="list-reset text-sm">
                     <li className="mb-2">
-                        <a href="#" className="text-white hover:text-indigo-400">
+                        <Link href="#" className="text-white hover:text-indigo-400">
                         Facebook
-                        </a>
+                        </Link>
                     </li>
                     <li className="mb-2">
-                        <a href="#" className="text-white hover:text-indigo-400">
+                        <Link href="#" className="text-white hover:text-indigo-400">
                         Twitter
-                        </a>
+                        </Link>
                     </li>
                     <li className="mb-2">
-                        <a href="#" className="text-white hover:text-indigo-400">
+                        <Link href="#" className="text-white hover:text-indigo-400">
                         Instagram
-                        </a>
+                        </Link>
                     </li>
                     </ul>
                 </div>
@@ -38,25 +40,25 @@ export default function Footer() {
                     <h4 className="text-lg font-medium">Legal</h4>
                     <ul className="list-reset text-sm">
                     <li className="mb-2">
-                        <a href="/disclaimer" className="text-white hover:text-indigo-400">
+                        <Link href="/disclaimer" className="text-white hover:text-indigo-400">
                         Disclaimer
-                        </a>
+                        </Link>
                     </li>
                     <li className="mb-2">
-                        <a
+                        <Link
                         href="/privacy-policy"
                         className="text-white hover:text-indigo-400"
                         >
                         Privacy Policy
-                        </a>
+                        </Link>
                     </li>
                     <li className="mb-2">
-                        <a
+                        <Link
                         href="/terms-of-use"
                         className="text-white hover:text-indigo-400"
                         >
                         Terms of Use
-                        </a>
+                        </Link>
                     </li>
                     </ul>
                 </div>
