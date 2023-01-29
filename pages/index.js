@@ -29,7 +29,7 @@ export default function Home() {
             </div>
           </div>
           <div className="w-4/12 hidden lg:block xl:block 2xl:block">
-              <img className="object-cover object-center h-[500px] w-full" src={Leftimage.src} alt="girl dubbing"/>
+              <img className="object-cover object-center w-full" src={Leftimage.src} alt="girl dubbing"/>
           </div>
       </section>
       <style jsx>
